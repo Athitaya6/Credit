@@ -88,7 +88,7 @@ if st.button("ทำนายผล"):
     y = dt.Credit_History 
     st.button("ไม่ทำนายผล")
 
-    Knn_model = KNeighborsClassifier(n_neighbors=3)
+    Knn_model = KNeighborsClassifier(n_neighbors=7)
     Knn_model.fit(X, y)
 
 #ข้อมูลสำหรับทดลองจำแนกข้อมูล
