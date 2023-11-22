@@ -89,7 +89,7 @@ if st.button("ทำนายผล"):
     st.button("ไม่ทำนายผล")
 
     Knn_model = KNeighborsClassifier(n_neighbors=3)
-    #Knn_model.fit(X, y)
+    Knn_model.fit(X, y)
 
 #ข้อมูลสำหรับทดลองจำแนกข้อมูล
     x_input = np.array([[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term]])
