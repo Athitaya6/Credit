@@ -92,7 +92,7 @@ if st.button("ทำนายผล"):
     Knn_model.fit(X, y)
 
 #ข้อมูลสำหรับทดลองจำแนกข้อมูล
-    x_input = np.array([[rGender,rMarried,rDependents,rEducation,rSelf_Employed,rApplicantIncome,rCoapplicantIncome,rLoanAmount,rLoan_Amount_Term]])
+    x_input = np.array([[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term]])
 
 #เอา input ไปทดสอบ
     st.write(Knn_model.predict(x_input))
