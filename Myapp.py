@@ -23,6 +23,7 @@ st.markdown(html_1, unsafe_allow_html=True)
 st.markdown("")
 
 import pandas as pd
+import numpy as np
 
 dt=pd.read_csv('./data/Root1.csv')
 st.write(dt.head(10))
@@ -66,19 +67,19 @@ CoapplicantIncome = st.number_input("กรุณากรอกข้อมู�
 LoanAmount = st.number_input("กรุณากรอกข้อมูล วงเงินกู้/LoanAmount")
 Loan_Amount_Term = st.number_input("กรุณากรอกข้อมูล ระยะเวลากู้/Loan_Amount_Term หน่วยเป็นเดือน")
 
-rGender=np.sqrt(Gender)
-rMarried=np.sqrt(Married)
-rDependents=np.sqrt(Dependents)
-rEducation=np.sqrt(Education)
-rSelf_Employed=np.sqrt(Self_Employed)
-rApplicantIncome=np.sqrt(ApplicantIncome)
-rCoapplicantIncome=np.sqrt(CoapplicantIncome)
-rLoanAmount=np.sqrt(LoanAmount)
-rLoan_Amount_Term=np.sqrt(Loan_Amount_Term)
+import numpy as np
 
+Gender=np.sqrt(Gender)
+Married=np.sqrt(Married)
+Dependents=np.sqrt(Dependents)
+Education=np.sqrt(Education)
+Self_Employed=np.sqrt(Self_Employed)
+ApplicantIncome=np.sqrt(ApplicantIncome)
+CoapplicantIncome=np.sqrt(CoapplicantIncome)
+LoanAmount=np.sqrt(LoanAmount)
+Loan_Amount_Term=np.sqrt(Loan_Amount_Term)
 
 from sklearn.neighbors import KNeighborsClassifier
-import numpy as np
 
 if st.button("ทำนายผล"):
     #ทำนาย
