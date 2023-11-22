@@ -79,7 +79,7 @@ CoapplicantIncome=np.sqrt(CoapplicantIncome)
 LoanAmount=np.sqrt(LoanAmount)
 Loan_Amount_Term=np.sqrt(Loan_Amount_Term)
 
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 if st.button("ทำนายผล"):
     #ทำนาย
@@ -88,15 +88,15 @@ if st.button("ทำนายผล"):
     y = dt.Credit_History 
     st.button("ไม่ทำนายผล")
 
-    DTT_model = DecisionTreeClassifier (criterion='gini')
-    DTT_model.fit(X, y)
+    Knn_model = KNeighborsClassifier(n_neighbors=3)
+    #Knn_model.fit(X, y)
 
 #ข้อมูลสำหรับทดลองจำแนกข้อมูล
     x_input = np.array([[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term]])
 
 #เอา input ไปทดสอบ
-    st.write(DTT_model.predict(x_input))
-    out=DTT_model.predict(x_input)
+    st.write(Knn_model.predict(x_input))
+    out=Knn_model.predict(x_input)
 
     if out[0]=="0":    
         #st.image("./pic/iris1.jpg")
