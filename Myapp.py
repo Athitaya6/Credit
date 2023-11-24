@@ -106,6 +106,9 @@ if st.button("ทำนายผล"):
    elif out[0]=="0":
       st.image('pic/N.jpg')
       st.header("No")
+   else:
+      st.image("./pic/N.jpg") 
+      st.header("No") 
    st.button("ไม่ทำนาย")
 
 else:
